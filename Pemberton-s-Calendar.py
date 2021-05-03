@@ -1,8 +1,8 @@
-while True:
-    year = int(input("please type the year of today. "))
-    month = int(input("please type the month of today in numbers please don't put any 0s except for 10."))
-    date = int(input("please type the date of today. "))
-    if month == (1):
+while True: #here makes it repeat
+    year = int(input("please type the year of today. ")) #here takes the year
+    month = int(input("please type the month of today in numbers please don't put any 0s except for 10.")) #here takes the month
+    date = int(input("please type the date of today. ")) # here takes the date
+    if month == (1): # here transform the number of month into actual month's name
         Month = "January"
     if month == (2):
         Month = "February"
@@ -26,7 +26,7 @@ while True:
         Month = "November"
     if month == (12):
         Month = "December"
-    if month == 1:
+    if month == 1: #here makes sure the date don't have weird dates like january 0, also prints the actual thing
         if date >= 1:
             if date <= 31:
                 if year >= 0:
@@ -86,11 +86,11 @@ while True:
             if date <= 31:
                 if year >= 0:
                     print("Today is" , year , "," , Month , date)
-    if month >= 13:
+    if month >= 13: #here makes sure there are only 12 months and prints the ERROR
         print("ERROR")
     if month <= 0:
         print("ERROR")
-    if month == 1:
+    if month == 1: #here makes sure there aren't any weird dates and print the ERROR if there is any
         if date <= 0:
             print("ERROR")
         if date >= 32:
@@ -150,5 +150,5 @@ while True:
             print("ERROR")
         if date >= 32:
             print("ERROR")
-    if year <= -1:
+    if year <= -1: #here makes sure the year can't be negative and if it is, print ERROR
         print("ERROR")
